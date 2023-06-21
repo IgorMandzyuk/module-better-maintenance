@@ -1,0 +1,22 @@
+{
+    "name": "im/module-bettermeintenance",
+    "description": "Magento 2 Better Meintenance",
+    "type": "magento2-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mage2Gen",
+            "email": "info@mage2gen.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Im\\BetterMeintenance\\": ""
+        }
+    }
+}
