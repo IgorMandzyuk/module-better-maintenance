@@ -4,9 +4,9 @@
  * See COPYING.txt for license details.
  */
 
-namespace Im\Installer\Setup;
+namespace Iman\BetterMaintenance\Setup;
 
-use Im\Installer\Model\Maintenance;
+use Iman\BetterMaintenance\Model\Maintenance;
 use Magento\Framework\App\State;
 use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;

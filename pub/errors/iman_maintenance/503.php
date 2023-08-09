@@ -5,7 +5,7 @@
  */
 
 require_once 'processorFactory.php';
-$processorFactory = new \Im\Error\ProcessorFactory;
+$processorFactory = new \Iman\Error\ProcessorFactory;
 $processor = $processorFactory->createProcessor();
 $response = $processor->process();
 $response->sendResponse();

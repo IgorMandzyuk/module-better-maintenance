@@ -5,5 +5,5 @@
  */
 use Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Im_BetterMeintenance', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Iman_BetterMaintenance', __DIR__);
 

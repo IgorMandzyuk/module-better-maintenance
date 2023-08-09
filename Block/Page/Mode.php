@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
 
-namespace Im\Installer\Block\Page;
+namespace Iman\BetterMaintenance\Block\Page;
 
 class Mode
 {

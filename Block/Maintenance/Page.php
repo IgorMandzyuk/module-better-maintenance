@@ -4,9 +4,9 @@
  * See COPYING.txt for license details.
  */
 
-namespace Im\Installer\Block\Maintenance;
+namespace Iman\BetterMaintenance\Block\Maintenance;
 
-use Im\Installer\Model\Config;
+use Iman\BetterMaintenance\Model\Config;
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
 
@@ -20,7 +20,7 @@ class Page extends Template
         Context $context,
         array   $data = []
     ) {
-        $this->setTemplate('Im_Installer::maintenance_page.phtml');
+        $this->setTemplate('Iman_BetterMaintenance::maintenance_page.phtml');
         $this->config = $config;
         parent::__construct($context, $data);
     }

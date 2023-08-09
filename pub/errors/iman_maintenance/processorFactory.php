@@ -4,13 +4,13 @@
  * See COPYING.txt for license details.
  */
 
-namespace Im\Error;
+namespace Iman\Error;
 
 use Magento\Framework\App\Bootstrap;
 
 require_once BP . '/app/bootstrap.php';
 require_once BP . '/pub/errors/processor.php';
-require_once BP . '/pub/errors/im_maintenance/processor.php';
+require_once BP . '/pub/errors/iman_maintenance/processor.php';
 
 class ProcessorFactory
 {

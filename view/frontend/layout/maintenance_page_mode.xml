@@ -25,7 +25,7 @@
         <referenceBlock name="translate" remove="true"/>
         <referenceBlock name="requirejs-config" remove="true"/>
         <referenceContainer name="root">
-            <block class="Magento\Framework\View\Element\Template" name="page.modee" template="Im_Installer::page/mode.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="page.modee" template="Iman_BetterMaintenance::page/mode.phtml"/>
         </referenceContainer>
     </body>
 </page>

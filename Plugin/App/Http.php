@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
 
-namespace Im\Installer\Plugin\App;
+namespace Iman\BetterMaintenance\Plugin\App;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\App\Bootstrap;
@@ -14,7 +14,7 @@ use Psr\Log\LoggerInterface;
 
 class Http
 {
-    const MAINTENANCE_PAGE_PATH = 'errors/im_maintenance/503.php';
+    const MAINTENANCE_PAGE_PATH = 'errors/iman_maintenance/503.php';
 
     /** @var Filesystem */
     protected $filesystem;

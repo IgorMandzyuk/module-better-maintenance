@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
 
-namespace Im\Error;
+namespace Iman\Error;
 
 use Magento\Framework\App\Request\Http as Request;
 use Magento\Framework\App\Response\Http as Response;
@@ -20,7 +20,7 @@ class Processor extends BaseProcessor
     /**
      * @var string
      */
-    protected $template = 'Im_Installer::maintenance_page.phtml';
+    protected $template = 'Iman_BetterMaintenance::maintenance_page.phtml';
 
     /**
      * @var string
@@ -62,7 +62,7 @@ class Processor extends BaseProcessor
      */
     public function process()
     {
-        $this->processMaintenancePage();
+        return $this->processMaintenancePage();
     }
 
     /**
@@ -73,7 +73,7 @@ class Processor extends BaseProcessor
         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
         $state = $objectManager->get(\Magento\Framework\App\State::class);
         $state->setAreaCode(\Magento\Framework\App\Area::AREA_FRONTEND);
-        $content = $objectManager->create(\Im\Installer\Block\Maintenance\Page::class)->toHtml();
+        $content = $objectManager->create(\Iman\BetterMaintenance\Block\Maintenance\Page::class)->toHtml();
 
         return $this->response(503, $content ? $content : 'Service Temporary Unavailable');
     }

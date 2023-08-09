@@ -1,5 +1,5 @@
 {
-    "name": "im/module-bettermeintenance",
+    "name": "iman/module-bettermaintenance",
     "description": "Magento 2 Better Meintenance",
     "type": "magento2-module",
     "license": "MIT",
@@ -16,7 +16,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Im\\BetterMeintenance\\": ""
+            "Iman\\BetterMeintenance\\": ""
         }
     }
 }
