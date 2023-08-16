@@ -10,7 +10,7 @@
         <tab id="iman" translate="label" sortOrder="110">
             <label>Iman</label>
         </tab>
-        <section id="imanmaintenance" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+        <section id="iman_maintenance" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
             <label>Better Maintenance</label>
             <tab>iman</tab>
@@ -25,9 +25,16 @@
             </group>
             <group id="maintenance" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Maintenance</label>
-                <field id="installmaintenance" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Enable maintenance while extension installing</label>
+                <field id="use_block" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Use custom block</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="custom_cms_block" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>CMS Block</label>
+                    <source_model>Magento\Cms\Model\Config\Source\Block</source_model>
+                     <depends>
+                        <field id="use_block">1</field>
+                    </depends>
                 </field>
                 <field id="title" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Title</label>

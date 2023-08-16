@@ -9,7 +9,7 @@ namespace Iman\BetterMaintenance\Block\Maintenance;
 use Iman\BetterMaintenance\Model\Config;
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
-
+use Magento\Cms\Block\Block;
 class Page extends Template
 {
     /** @var Config */
@@ -52,5 +52,23 @@ class Page extends Template
     public function getDescription()
     {
         return $this->config->getDescription();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function _toHtml()
+    {
+        if (!$this->config->enabled()){
+            return '';
+        }
+
+        $html = parent::_toHtml();
+        if ($this->config->isUseCustomBlock() && $this->config->getCustomBlockIdentifier()){
+            $cmsBlock = $this->getLayout()->createBlock(Block::class);
+            $html = $cmsBlock->setBlockId($this->config->getCustomBlockIdentifier())->toHtml();
+        }
+
+        return $html;
     }
 }

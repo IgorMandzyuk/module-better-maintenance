@@ -7,10 +7,19 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <imanmaintenance>
+        <iman_maintenance>
             <general>
                 <enabled>0</enabled>
             </general>
-        </imanmaintenance>
+            <maintenance>
+                <use_block>0</use_block>
+                <custom_cms_block/>
+                <title><![CDATA[We’ll be back soon!]]></title>
+                <content><![CDATA[Sorry for the inconvenience. We’re performing some maintenance at the moment.]]></content>
+                <notification/>
+                <logo/>
+                <copyright><![CDATA[Copyright ©. All rights reserved.]]></copyright>
+            </maintenance>
+        </iman_maintenance>
     </default>
 </config>

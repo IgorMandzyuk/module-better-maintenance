@@ -28,46 +28,11 @@ class Config
     }
 
     /**
-     * @param $id
-     * @return $this
-     */
-    public function setStoreId($id)
-    {
-        $this->storeId = $id;
-
-        return $this;
-    }
-
-    /**
      * @return mixed
      */
     public function getLogoUrl()
     {
         return $this->config('maintenance/logo');
-    }
-
-    /**
-     * @return string
-     */
-    public function getBackgroundColor()
-    {
-        return (string)$this->config('general/background_color');
-    }
-
-    /**
-     * @return string
-     */
-    public function getSideColor()
-    {
-        return (string)$this->config('general/side_background_color');
-    }
-
-    /**
-     * @return string
-     */
-    public function getFooterAndHeaderColor()
-    {
-        return (string)$this->config('general/footer_and_header_background_color');
     }
 
     /**
@@ -94,8 +59,28 @@ class Config
         return (string)$this->config('maintenance/description');
     }
 
+    /**
+     * @return bool
+     */
+    public function isUseCustomBlock()
+    {
+        return (bool)$this->config('maintenance/use_block');
+    }
+
+    /**
+     * @return string
+     */
+    public function getCustomBlockIdentifier()
+    {
+        return (string)$this->config('maintenance/custom_cms_block');
+    }
+
+    public function enabled(){
+        return (bool)$this->config('general/enabled');
+    }
+
     protected function config($code)
     {
-        return $this->scopeConfig->getValue("imanmaintenance/{$code}", ScopeInterface::SCOPE_STORE, $this->storeId);
+        return $this->scopeConfig->getValue("iman_maintenance/{$code}", ScopeInterface::SCOPE_STORE, $this->storeId);
     }
 }
